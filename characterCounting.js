@@ -1,3 +1,6 @@
+//enter input phrase in command line using node
+//output will show 
+
 var userInput = process.argv[2];
 
 var characterCount = {
@@ -12,12 +15,12 @@ var countLetters = function(phrase) {
 			continue;
 		}
 		if (characterCount[lowerPhrase[i]]) {
-			characterCount[lowerPhrase[i]] += 1;
+			characterCount[lowerPhrase[i]] = [];
 		} else {
-			characterCount[lowerPhrase[i]] = 1;
+			characterCount[lowerPhrase[i]] = [i];
 		}
 	}
+	console.log(characterCount);
 }
 
-countLetters(userInput)
-console.log(characterCount);
+countLetters(userInput);
